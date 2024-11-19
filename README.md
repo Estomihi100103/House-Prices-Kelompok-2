@@ -64,6 +64,11 @@ References: Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., ... & Liu,
 Berikut adalah tahapan utama dalam proyek ini:
 
 ### 1. Buisness Understanding
+Proyek ini memberikan solusi berbasis teknologi bagi pasar real estate yang menghadapi tantangan dalam menyediakan estimasi harga properti yang akurat dan terkini di tengah persaingan yang ketat dan dinamika pasar yang terus berubah. Sangat penting untuk memahami semua variabel yang memengaruhi harga properti, termasuk lokasi, fitur fisik rumah, kondisi ekonomi lokal, dan tren pasar. Untuk mengatasi masalah ini, digunakan pendekatan analisis prediktif dengan memanfaatkan data properti historis yang mencakup fitur seperti luas tanah, jumlah kamar, lokasi geografis, kondisi fisik rumah, dan pola harga pasar lokal. Proyek ini berfokus pada pengembangan model prediksi harga properti berbasis machine learning yang dirancang untuk mengestimasi harga jual rumah (SalePrice). Hal ini membantu meningkatkan efisiensi dan transparansi di pasar real estate.
+Model ini diharapkan dapat memberikan manfaat strategis bagi berbagai pihak yang terlibat dalam industri real estate, termasuk:
+1.	Pembeli rumah: Untuk memperoleh estimasi harga yang wajar untuk properti yang diinginkan.
+2.	Penjual rumah: Untuk menentukan harga jual yang kompetitif dan realistis.
+3.	Agen properti dan pengembang: Untuk mendukung pengambilan keputusan dalam strategi pemasaran dan memahami tren pasar.
 
 ### 2. Data Understanding
 
