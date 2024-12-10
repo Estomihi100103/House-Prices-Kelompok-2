@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div
+        class="w-full max-w-4xl bg-white shadow-xl rounded-2xl overflow-hidden">
+        <!-- Header-->
+        {% include 'header.html' %}
+
+        <!-- Formulir Prediksi -->
+        <form id="predictionForm" class="p-8 space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Input Fields -->
+                <div>
+                    <label for="overallQual"
+                        class="block text-sm font-medium text-gray-700">Kualitas
+                        Keseluruhan</label>
+                    <input
+                        type="number"
+                        id="overallQual"
+                        name="overallQual"
+                        required
+                        placeholder="Kualitas keseluruhan rumah"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="grLivArea"
+                        class="block text-sm font-medium text-gray-700">Luas
+                        Area Tinggal</label>
+                    <input
+                        type="number"
+                        id="grLivArea"
+                        name="grLivArea"
+                        required
+                        placeholder="Luas area tinggal m²"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="garageCars"
+                        class="block text-sm font-medium text-gray-700">Kapasitas
+                        Garasi</label>
+                    <input
+                        type="number"
+                        id="garageCars"
+                        name="garageCars"
+                        required
+                        placeholder="Jumlah mobil yang dapat ditampung"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="garageArea"
+                        class="block text-sm font-medium text-gray-700">Luas
+                        Garasi</label>
+                    <input
+                        type="number"
+                        id="garageArea"
+                        name="garageArea"
+                        required
+                        placeholder="Luas garasi dalam m²"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="totalBsmtSF"
+                        class="block text-sm font-medium text-gray-700">Luas
+                        Basement</label>
+                    <input
+                        type="number"
+                        id="totalBsmtSF"
+                        name="totalBsmtSF"
+                        required
+                        placeholder="Total luas basement"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="firstFlrSF"
+                        class="block text-sm font-medium text-gray-700">Luas
+                        Lantai Pertama</label>
+                    <input
+                        type="number"
+                        id="firstFlrSF"
+                        name="firstFlrSF"
+                        required
+                        placeholder="Luas lantai pertama"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="fullBath"
+                        class="block text-sm font-medium text-gray-700">Jumlah
+                        Kamar Mandi</label>
+                    <input
+                        type="number"
+                        id="fullBath"
+                        name="fullBath"
+                        required
+                        placeholder="Jumlah kamar mandi"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="totRmsAbvGrd"
+                        class="block text-sm font-medium text-gray-700">Total
+                        Ruangan</label>
+                    <input
+                        type="number"
+                        id="totRmsAbvGrd"
+                        name="totRmsAbvGrd"
+                        required
+                        placeholder="Jumlah ruangan di atas tanah"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="yearBuilt"
+                        class="block text-sm font-medium text-gray-700">Tahun
+                        Dibangun</label>
+                    <input
+                        type="number"
+                        id="yearBuilt"
+                        name="yearBuilt"
+                        required
+                        placeholder="Tahun rumah dibangun"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+
+                <div>
+                    <label for="yearRemodAdd"
+                        class="block text-sm font-medium text-gray-700">Tahun
+                        Renovasi</label>
+                    <input
+                        type="number"
+                        id="yearRemodAdd"
+                        name="yearRemodAdd"
+                        required
+                        placeholder="Tahun terakhir renovasi"
+                        class="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                </div>
+            </div>
+
+            <!-- Tombol Prediksi -->
+            <div class="mt-6">
+                <button
+                    type="submit"
+                    class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Prediksi Harga Rumah
+                </button>
+            </div>
+        </form>
+
+        <!-- Bagian Hasil Prediksi -->
+        <div id="resultSection" class="p-8 bg-gray-50 border-t">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Hasil
+                Prediksi</h2>
+            <div
+                id="predictionResult"
+                class="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                <p id="priceText" class="text-2xl font-bold text-indigo-900">
+                    Belum ada prediksi
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
